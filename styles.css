@@ -178,12 +178,54 @@ h1 {
     font-size: 3rem;
     position: absolute;
     left: 50%;
+    top: 3rem;
     transform: translate(-50%, 0);
 }
 
 .current-player {
     font-size: 3rem;
     position: absolute;
+    top: 3rem;
     left: 50%;
     transform: translate(-50%, 0);
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 56.25rem) {
+    .game {
+        grid-template: 1fr minmax(300px, 50vw) 1fr / 1fr;
+    }
+
+    .player-container {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .player {
+        width: 40%;
+    }
+
+    .grid {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        width: clamp(300px, 50vw, 50vw);
+        justify-self: center;
+    }
+
+    .controls {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        
+    }
+
+    .start {
+        bottom: 3rem;
+    }
+
+    .next-round {
+        bottom: 1rem;
+    }
 }
