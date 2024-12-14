@@ -1,0 +1,189 @@
+@font-face {
+    font-family: Caveat;
+    src: url("materials/fonts/Caveat/Caveat-Regular.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Caveat;
+}
+
+body {
+    background-image: url("materials/paper-texture.jpg");
+    margin: 0;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin: 0 0 2rem 0;
+}
+
+.game {
+    display: grid;
+    grid-template: 70vh / 1fr 70vh 1fr;
+}
+
+.player-container {
+    grid-column: 1 / 2;
+    padding: 0 3rem;
+}
+
+.player {
+    display: block;
+    margin-bottom: 4rem;
+}
+
+.player .name {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.player .wins {
+    display: block;
+    font-size: 1.4rem;
+}
+
+.marker-text {
+    position: relative;
+    font-size: 1.4rem;
+
+}
+
+.marker-img {
+    position: absolute;
+    right: -50%;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 2rem;
+}
+
+.player > label {
+    display: block;
+    font-size: 2rem;
+}
+
+.player > input {
+    width: 100%;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.player > input:focus {
+    outline: none;
+}
+
+.grid {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    
+}
+
+.grid > div {
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cross {
+    background-image: url("materials/cross.png");
+}
+
+.circle {
+    background-image: url("materials/circle.png");
+}
+
+.grid > div:nth-child(1) {
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+.grid > div:nth-child(2) {
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+.grid > div:nth-child(3) {
+    border-bottom: 3px solid black;
+}
+
+.grid > div:nth-child(4) {
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+.grid > div:nth-child(5) {
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+.grid > div:nth-child(6) {
+    border-bottom: 3px solid black;
+}
+
+.grid > div:nth-child(7) {
+    border-right: 3px solid black;
+}
+
+.grid > div:nth-child(8) {
+    border-right: 3px solid black;
+}
+
+.controls {
+    grid-column: 3 / 4;
+    padding: 0 3rem;
+    position: relative;
+
+}
+
+.controls > label {
+    font-size: 2rem;
+}
+
+.controls > input {
+    width: 4rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.button {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    
+}
+
+.start {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.next-round {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.results {
+    font-size: 3rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.current-player {
+    font-size: 3rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
